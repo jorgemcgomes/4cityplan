@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.plan.proj
+OpenIDE-Module-Install: org/plan/proj/Installer.class
+OpenIDE-Module-Layer: org/plan/proj/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/plan/proj/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/SSx.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/SSx.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/ontologies/LandUseSkeleton.owl</Import>
+    <Declaration>
+        <Class IRI="#Agriculture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AmusementOrSports"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArtAndCulture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarParks"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Catering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Commercial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Community"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrinkingEstablishments"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dwellings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Education"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Financial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GoodsTerminals"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Government"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HealthCentres"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hospitals"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HotFoodTakeaways"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotels"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Industry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Institutions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Leisure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Offices"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OtherVehicles"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Residential"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RestaurantsAndCafes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Retail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SSxCategory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Services"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Storage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportTerminals"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnderConstruction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnderDeveloped"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnknownOrUndefined"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Utilities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VacantBuilding"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Agriculture"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Agriculture"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#707000</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AmusementOrSports"/>
+        <Class IRI="#Leisure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArtAndCulture"/>
+        <Class IRI="#Leisure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarParks"/>
+        <Class IRI="#Parking"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Catering"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Catering"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#FF9090</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Commercial"/>
+        <Class IRI="#Services"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Community"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Community"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#00C0C0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DrinkingEstablishments"/>
+        <Class IRI="#Catering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dwellings"/>
+        <Class IRI="#Residential"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Education"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Education"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#006BA0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Financial"/>
+        <Class IRI="#Services"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GoodsTerminals"/>
+        <Class IRI="#Transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Government"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Government"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#9090FF</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HealthCentres"/>
+        <Class IRI="#Medical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hospitals"/>
+        <Class IRI="#Medical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HotFoodTakeaways"/>
+        <Class IRI="#Catering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotels"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotels"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#FFFF90</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Industry"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Industry"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#700070</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Institutions"/>
+        <Class IRI="#Residential"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leisure"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leisure"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#7DD000</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medical"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medical"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#80D5FF</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Offices"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Offices"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#FFC080</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OtherVehicles"/>
+        <Class IRI="#Parking"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parking"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parking"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#C0C0C0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Residential"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Residential"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#FFFF00</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RestaurantsAndCafes"/>
+        <Class IRI="#Catering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retail"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retail"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#FF0000</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SSxCategory"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#LandUseCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Services"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Services"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#FF8000</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Storage"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Storage"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#C000C0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transport"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transport"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#707070</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransportTerminals"/>
+        <Class IRI="#Transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnderConstruction"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnderConstruction"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#FFD0FF</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnderDeveloped"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnderDeveloped"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#B0FFB0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnknownOrUndefined"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnknownOrUndefined"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#FFFFFF</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Utilities"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Utilities"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#804000</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VacantBuilding"/>
+        <Class IRI="#SSxCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VacantBuilding"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasColor"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">#303030</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Agriculture"/>
+        <Class IRI="#Catering"/>
+        <Class IRI="#Community"/>
+        <Class IRI="#Education"/>
+        <Class IRI="#Government"/>
+        <Class IRI="#Hotels"/>
+        <Class IRI="#Industry"/>
+        <Class IRI="#Leisure"/>
+        <Class IRI="#Medical"/>
+        <Class IRI="#Offices"/>
+        <Class IRI="#Parking"/>
+        <Class IRI="#Residential"/>
+        <Class IRI="#Retail"/>
+        <Class IRI="#Services"/>
+        <Class IRI="#Storage"/>
+        <Class IRI="#Transport"/>
+        <Class IRI="#UnderConstruction"/>
+        <Class IRI="#UnderDeveloped"/>
+        <Class IRI="#UnknownOrUndefined"/>
+        <Class IRI="#Utilities"/>
+        <Class IRI="#VacantBuilding"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AmusementOrSports"/>
+        <Class IRI="#ArtAndCulture"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CarParks"/>
+        <Class IRI="#OtherVehicles"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Commercial"/>
+        <Class IRI="#Financial"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DrinkingEstablishments"/>
+        <Class IRI="#HotFoodTakeaways"/>
+        <Class IRI="#RestaurantsAndCafes"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Dwellings"/>
+        <Class IRI="#Institutions"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GoodsTerminals"/>
+        <Class IRI="#TransportTerminals"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HealthCentres"/>
+        <Class IRI="#Hospitals"/>
+    </DisjointClasses>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
+

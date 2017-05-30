@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.plan.owlapi
+OpenIDE-Module-Localizing-Bundle: org/plan/owlapi/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

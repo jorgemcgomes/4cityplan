@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.plan.apachecommons
+OpenIDE-Module-Localizing-Bundle: org/plan/apachecommons/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

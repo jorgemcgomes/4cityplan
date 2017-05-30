@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/LBCSWorkflow2.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/LBCSWorkflow2.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl</Import>
+    <Import>http://www.semanticweb.org/ontologies/LBCS.owl</Import>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Commercial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#CommonBuildings"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#ContextMap"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Dimensions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#EducationFacilities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#HealthFacilities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#IdentifyFunction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#IdentifyOwnership"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#KeyBuildings"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicHospital"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicSchool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Residential"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PrivateHospital"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PrivateSchool"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#ClassifyStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Commercial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showFeatures"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.GeneralSalesOrServices"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Commercial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#WorkflowStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#CommonBuildings"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#WorkflowStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#ContextMap"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#WorkflowStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Dimensions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#DisplayStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#EducationFacilities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showFeatures"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.EducationalServices"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#EducationFacilities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#DisplayStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#HealthFacilities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showFeatures"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.HealthAndHumanServices"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#HealthFacilities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#WorkflowStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#IdentifyFunction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showFeatures"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#Function"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#IdentifyFunction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#WorkflowStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#IdentifyOwnership"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#WorkflowStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#KeyBuildings"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#ClassifyStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicHospital"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showCategory"/>
+            <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#Function"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicHospital"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showFeatures"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.Hospital"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#O.PublicRestrictions-Local_State_FederalOwnership"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicHospital"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#ClassifyStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicSchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showCategory"/>
+            <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#Function"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicSchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showFeatures"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.GradeSchools"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#O.PublicRestrictions-Local_State_FederalOwnership"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicSchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#ClassifyStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Residential"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showFeatures"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.ResidenceOrAccommodationFunction"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Residential"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#ClassifyStep"/>
+        <NamedIndividual IRI="#PrivateHospital"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showCategory"/>
+            <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#Function"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#PrivateHospital"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showFeatures"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.Hospital"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#O.NoConstraints-PrivateOwnership"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#PrivateHospital"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#ClassifyStep"/>
+        <NamedIndividual IRI="#PrivateSchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showCategory"/>
+            <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#Function"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#PrivateSchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#showFeatures"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.GradeSchools"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#O.NoConstraints-PrivateOwnership"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#PrivateSchool"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasNextStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Commercial"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Residential"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasFirstSubstep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#CommonBuildings"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Commercial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#firstSubstepOf"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#ContextMap"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#RootStep"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasFirstSubstep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#ContextMap"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#KeyBuildings"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasNextStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#ContextMap"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Dimensions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasFirstSubstep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#Dimensions"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#IdentifyFunction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasFirstSubstep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#EducationFacilities"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicSchool"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasFirstSubstep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#HealthFacilities"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicHospital"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasNextStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#HealthFacilities"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#EducationFacilities"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasNextStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#IdentifyFunction"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#IdentifyOwnership"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasFirstSubstep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#KeyBuildings"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#HealthFacilities"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasNextStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#KeyBuildings"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#CommonBuildings"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasNextStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicHospital"/>
+        <NamedIndividual IRI="#PrivateHospital"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl#hasNextStep"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCSWorkflow.owl#PublicSchool"/>
+        <NamedIndividual IRI="#PrivateSchool"/>
+    </ObjectPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/LBCSFacilities.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/LBCSFacilities.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl</Import>
+    <Import>http://www.semanticweb.org/ontologies/LBCS.owl</Import>
+    <Declaration>
+        <NamedIndividual IRI="#1Ciclo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2Ciclo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BAR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CampoDesporto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DiversaoNocturna"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EB1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EB1+JI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EspacoVerde"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JAR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JardimInfancia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PCamp"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#Service"/>
+        <NamedIndividual IRI="#1Ciclo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#Service"/>
+        <NamedIndividual IRI="#2Ciclo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#FacilityType"/>
+        <NamedIndividual IRI="#BAR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasAffinity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.BarOrDrinkingPlace"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#BAR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#Service"/>
+        <NamedIndividual IRI="#CampoDesporto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#Service"/>
+        <NamedIndividual IRI="#DiversaoNocturna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#FacilityType"/>
+        <NamedIndividual IRI="#EB1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasAffinity"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.Arts_Entertainment_Recreation"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.NurseryAndPreschool"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#EB1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasDislike"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.BarOrDrinkingPlace"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#EB1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#FacilityType"/>
+        <NamedIndividual IRI="#EB1+JI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasAffinity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.Arts_Entertainment_Recreation"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#EB1+JI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasDislike"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.BarOrDrinkingPlace"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#EB1+JI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#Service"/>
+        <NamedIndividual IRI="#EspacoVerde"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#FacilityType"/>
+        <NamedIndividual IRI="#JAR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasAffinity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.Amusement_Sports_RecreationEstablishment"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#JAR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#FacilityType"/>
+        <NamedIndividual IRI="#JI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasAffinity"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.Arts_Entertainment_Recreation"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.ElementarySchool"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#JI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasDislike"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.BarOrDrinkingPlace"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#JI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#Service"/>
+        <NamedIndividual IRI="#JardimInfancia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#FacilityType"/>
+        <NamedIndividual IRI="#PCamp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasAffinity"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.Amusement_Sports_RecreationEstablishment"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+                    <Class IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.NaturalAndOtherRecreationalParks"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#PCamp"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasLandUse"/>
+        <NamedIndividual IRI="#1Ciclo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.ElementarySchool"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasLandUse"/>
+        <NamedIndividual IRI="#2Ciclo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.ElementarySchool"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#providesServices"/>
+        <NamedIndividual IRI="#BAR"/>
+        <NamedIndividual IRI="#DiversaoNocturna"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasLandUse"/>
+        <NamedIndividual IRI="#CampoDesporto"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.Fitness_RecreationalSports_Gym_AthleticClub"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasLandUse"/>
+        <NamedIndividual IRI="#DiversaoNocturna"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.BarOrDrinkingPlace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#providesServices"/>
+        <NamedIndividual IRI="#EB1"/>
+        <NamedIndividual IRI="#1Ciclo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#providesServices"/>
+        <NamedIndividual IRI="#EB1+JI"/>
+        <NamedIndividual IRI="#1Ciclo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#providesServices"/>
+        <NamedIndividual IRI="#EB1+JI"/>
+        <NamedIndividual IRI="#JardimInfancia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasLandUse"/>
+        <NamedIndividual IRI="#EspacoVerde"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.NaturalAndOtherRecreationalParks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#providesServices"/>
+        <NamedIndividual IRI="#JAR"/>
+        <NamedIndividual IRI="#EspacoVerde"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#providesServices"/>
+        <NamedIndividual IRI="#JI"/>
+        <NamedIndividual IRI="#JardimInfancia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasLandUse"/>
+        <NamedIndividual IRI="#JardimInfancia"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/LBCS.owl#F.NurseryAndPreschool"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#providesServices"/>
+        <NamedIndividual IRI="#PCamp"/>
+        <NamedIndividual IRI="#CampoDesporto"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasIrradiation"/>
+        <NamedIndividual IRI="#BAR"/>
+        <Literal datatypeIRI="&xsd;integer">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#maxCapacity"/>
+        <NamedIndividual IRI="#BAR"/>
+        <Literal datatypeIRI="&xsd;integer">1000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#minCapacity"/>
+        <NamedIndividual IRI="#BAR"/>
+        <Literal datatypeIRI="&xsd;integer">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#shortID"/>
+        <NamedIndividual IRI="#BAR"/>
+        <Literal datatypeIRI="&xsd;string">BAR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasIrradiation"/>
+        <NamedIndividual IRI="#EB1"/>
+        <Literal datatypeIRI="&xsd;integer">1500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#maxCapacity"/>
+        <NamedIndividual IRI="#EB1"/>
+        <Literal datatypeIRI="&xsd;integer">4500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#minCapacity"/>
+        <NamedIndividual IRI="#EB1"/>
+        <Literal datatypeIRI="&xsd;integer">2000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#shortID"/>
+        <NamedIndividual IRI="#EB1"/>
+        <Literal datatypeIRI="&xsd;string">EB1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasIrradiation"/>
+        <NamedIndividual IRI="#EB1+JI"/>
+        <Literal datatypeIRI="&xsd;integer">1500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#maxCapacity"/>
+        <NamedIndividual IRI="#EB1+JI"/>
+        <Literal datatypeIRI="&xsd;integer">4500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#minCapacity"/>
+        <NamedIndividual IRI="#EB1+JI"/>
+        <Literal datatypeIRI="&xsd;integer">1000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#shortID"/>
+        <NamedIndividual IRI="#EB1+JI"/>
+        <Literal datatypeIRI="&xsd;string">EB1+JI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasIrradiation"/>
+        <NamedIndividual IRI="#JAR"/>
+        <Literal datatypeIRI="&xsd;integer">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#maxCapacity"/>
+        <NamedIndividual IRI="#JAR"/>
+        <Literal datatypeIRI="&xsd;integer">5000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#minCapacity"/>
+        <NamedIndividual IRI="#JAR"/>
+        <Literal datatypeIRI="&xsd;integer">1000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#shortID"/>
+        <NamedIndividual IRI="#JAR"/>
+        <Literal datatypeIRI="&xsd;string">JAR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasIrradiation"/>
+        <NamedIndividual IRI="#JI"/>
+        <Literal datatypeIRI="&xsd;integer">1200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#maxCapacity"/>
+        <NamedIndividual IRI="#JI"/>
+        <Literal datatypeIRI="&xsd;integer">3600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#minCapacity"/>
+        <NamedIndividual IRI="#JI"/>
+        <Literal datatypeIRI="&xsd;integer">900</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#shortID"/>
+        <NamedIndividual IRI="#JI"/>
+        <Literal datatypeIRI="&xsd;string">JI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#hasIrradiation"/>
+        <NamedIndividual IRI="#PCamp"/>
+        <Literal datatypeIRI="&xsd;integer">1000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#maxCapacity"/>
+        <NamedIndividual IRI="#PCamp"/>
+        <Literal datatypeIRI="&xsd;integer">2000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#minCapacity"/>
+        <NamedIndividual IRI="#PCamp"/>
+        <Literal datatypeIRI="&xsd;integer">800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl#shortID"/>
+        <NamedIndividual IRI="#PCamp"/>
+        <Literal datatypeIRI="&xsd;string">PCamp</Literal>
+    </DataPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#JI</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Jardim de Infância</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

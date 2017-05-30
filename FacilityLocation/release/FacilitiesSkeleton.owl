@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/FacilityLocationSkeleton.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/ontologies/LandUseSkeleton.owl</Import>
+    <Declaration>
+        <Class IRI="#Facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FacilityType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAffinity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDislike"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFacilityType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLandUse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#providesServices"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasIrradiation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxCapacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minCapacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#shortID"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Facility"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/GISCore.owl#Feature"/>
+    </SubClassOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasFacilityType"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAffinity"/>
+        <Class IRI="#FacilityType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDislike"/>
+        <Class IRI="#FacilityType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFacilityType"/>
+        <Class IRI="#Facility"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLandUse"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#providesServices"/>
+        <Class IRI="#FacilityType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAffinity"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/GISCore.owl#Feature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDislike"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/GISCore.owl#Feature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFacilityType"/>
+        <Class IRI="#FacilityType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLandUse"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#LandUseCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#providesServices"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#hasFacilityType"/>
+            <ObjectProperty IRI="#providesServices"/>
+            <ObjectProperty IRI="#hasLandUse"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#hasCategory"/>
+    </SubObjectPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasIrradiation"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#maxCapacity"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#minCapacity"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#shortID"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasIrradiation"/>
+        <Class IRI="#FacilityType"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#maxCapacity"/>
+        <Class IRI="#FacilityType"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#minCapacity"/>
+        <Class IRI="#FacilityType"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#shortID"/>
+        <Class IRI="#FacilityType"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasIrradiation"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#maxCapacity"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#minCapacity"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#shortID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

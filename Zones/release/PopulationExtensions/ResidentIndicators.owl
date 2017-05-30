@@ -1,0 +1,1059 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/ResidentIndicators.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/ResidentIndicators.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/ontologies/PopulationSkeleton.owl</Import>
+    <Declaration>
+        <Class IRI="#AgeGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BeliefGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EducationLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EthnicGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IncomeLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RacialEthnicGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAgeDistribution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEducationDistribution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEthnicDistribution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIncomeDistribution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStudentsDistribution"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#activePopulationInWorkingAge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#adultLiteracyRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ageRangeFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ageRangeTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#averageHouseholdSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#carOwnershipRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cityPopulation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crimeRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crudeBirthRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crudeDeathRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crudeMarriageRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#generalFertilityRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lifeExpectancy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#medianHouseholdIncome"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#netMigrationRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numberOfHouseholds"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#populationBelowPovertyLine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#populationGrowth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#unemploymentRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Age0-4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Age18-64"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Age5-17"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Age65+"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CollegeSchool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ElementarySchool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HighSchool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HispanicLatinoEthnicity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Income10000-14999"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Income100000-149999"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Income15000-24999"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Income150000-199999"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Income25000-34999"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Income35000-49999"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Income50000-74999"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Income75000-99999"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IncomeLess10000"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IncomeMore200000"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kindergarten"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PreSchool"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AgeGroup"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BeliefGroup"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EducationLevel"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EthnicGroup"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IncomeLevel"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RacialEthnicGroup"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#EthnicGroup"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AgeGroup"/>
+        <Class IRI="#BeliefGroup"/>
+        <Class IRI="#EducationLevel"/>
+        <Class IRI="#EthnicGroup"/>
+        <Class IRI="#IncomeLevel"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#AgeGroup"/>
+        <NamedIndividual IRI="#Age0-4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AgeGroup"/>
+        <NamedIndividual IRI="#Age18-64"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AgeGroup"/>
+        <NamedIndividual IRI="#Age5-17"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AgeGroup"/>
+        <NamedIndividual IRI="#Age65+"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Agnosticism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RacialEthnicGroup"/>
+        <NamedIndividual IRI="#AmerindianEthnicity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Antisemitism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RacialEthnicGroup"/>
+        <NamedIndividual IRI="#AsianEthnicity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Atheism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Bahaism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RacialEthnicGroup"/>
+        <NamedIndividual IRI="#BlackEthnicity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Buddhism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EthnicGroup"/>
+        <NamedIndividual IRI="#CentralAsianTurkishEthnicity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Christianity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EducationLevel"/>
+        <NamedIndividual IRI="#CollegeSchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Confucianism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EducationLevel"/>
+        <NamedIndividual IRI="#ElementarySchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EducationLevel"/>
+        <NamedIndividual IRI="#HighSchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Hinduism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EthnicGroup"/>
+        <NamedIndividual IRI="#HispanicLatinoEthnicity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#Income10000-14999"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#Income100000-149999"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#Income15000-24999"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#Income150000-199999"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#Income25000-34999"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#Income35000-49999"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#Income50000-74999"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#Income75000-99999"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#IncomeLess10000"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IncomeLevel"/>
+        <NamedIndividual IRI="#IncomeMore200000"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EthnicGroup"/>
+        <NamedIndividual IRI="#IndochineseEthnicity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Islam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Jainism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Judaism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EducationLevel"/>
+        <NamedIndividual IRI="#Kindergarten"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Neopaganism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EthnicGroup"/>
+        <NamedIndividual IRI="#NorthAfricanEthnicity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EducationLevel"/>
+        <NamedIndividual IRI="#PreSchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EthnicGroup"/>
+        <NamedIndividual IRI="#RussianEthnicity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Shinto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Sikhism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Taoism"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RacialEthnicGroup"/>
+        <NamedIndividual IRI="#WhiteEthnicity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeliefGroup"/>
+        <NamedIndividual IRI="#Zoroastrianism"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <NamedIndividual IRI="#Age0-4"/>
+        <Literal datatypeIRI="&xsd;integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeTo"/>
+        <NamedIndividual IRI="#Age0-4"/>
+        <Literal datatypeIRI="&xsd;integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <NamedIndividual IRI="#Age18-64"/>
+        <Literal datatypeIRI="&xsd;integer">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeTo"/>
+        <NamedIndividual IRI="#Age18-64"/>
+        <Literal datatypeIRI="&xsd;integer">64</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <NamedIndividual IRI="#Age5-17"/>
+        <Literal datatypeIRI="&xsd;integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeTo"/>
+        <NamedIndividual IRI="#Age5-17"/>
+        <Literal datatypeIRI="&xsd;integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <NamedIndividual IRI="#Age65+"/>
+        <Literal datatypeIRI="&xsd;integer">65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <NamedIndividual IRI="#CollegeSchool"/>
+        <Literal datatypeIRI="&xsd;integer">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <NamedIndividual IRI="#ElementarySchool"/>
+        <Literal datatypeIRI="&xsd;integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeTo"/>
+        <NamedIndividual IRI="#ElementarySchool"/>
+        <Literal datatypeIRI="&xsd;integer">14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <NamedIndividual IRI="#HighSchool"/>
+        <Literal datatypeIRI="&xsd;integer">14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeTo"/>
+        <NamedIndividual IRI="#HighSchool"/>
+        <Literal datatypeIRI="&xsd;integer">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#Income10000-14999"/>
+        <Literal datatypeIRI="&xsd;integer">10000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <NamedIndividual IRI="#Income10000-14999"/>
+        <Literal datatypeIRI="&xsd;integer">14999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#Income100000-149999"/>
+        <Literal datatypeIRI="&xsd;integer">100000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <NamedIndividual IRI="#Income100000-149999"/>
+        <Literal datatypeIRI="&xsd;integer">149999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#Income15000-24999"/>
+        <Literal datatypeIRI="&xsd;integer">15000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <NamedIndividual IRI="#Income15000-24999"/>
+        <Literal datatypeIRI="&xsd;integer">24999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#Income150000-199999"/>
+        <Literal datatypeIRI="&xsd;integer">150000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <NamedIndividual IRI="#Income150000-199999"/>
+        <Literal datatypeIRI="&xsd;integer">199999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#Income25000-34999"/>
+        <Literal datatypeIRI="&xsd;integer">25000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <NamedIndividual IRI="#Income25000-34999"/>
+        <Literal datatypeIRI="&xsd;integer">34999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#Income35000-49999"/>
+        <Literal datatypeIRI="&xsd;integer">35000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <NamedIndividual IRI="#Income35000-49999"/>
+        <Literal datatypeIRI="&xsd;integer">49999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#Income50000-74999"/>
+        <Literal datatypeIRI="&xsd;integer">50000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <NamedIndividual IRI="#Income50000-74999"/>
+        <Literal datatypeIRI="&xsd;integer">74999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#Income75000-99999"/>
+        <Literal datatypeIRI="&xsd;integer">75000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <NamedIndividual IRI="#Income75000-99999"/>
+        <Literal datatypeIRI="&xsd;integer">99999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#IncomeLess10000"/>
+        <Literal datatypeIRI="&xsd;integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <NamedIndividual IRI="#IncomeLess10000"/>
+        <Literal datatypeIRI="&xsd;integer">10000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <NamedIndividual IRI="#IncomeMore200000"/>
+        <Literal datatypeIRI="&xsd;integer">200000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <NamedIndividual IRI="#Kindergarten"/>
+        <Literal datatypeIRI="&xsd;integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeTo"/>
+        <NamedIndividual IRI="#Kindergarten"/>
+        <Literal datatypeIRI="&xsd;integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <NamedIndividual IRI="#PreSchool"/>
+        <Literal datatypeIRI="&xsd;integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ageRangeTo"/>
+        <NamedIndividual IRI="#PreSchool"/>
+        <Literal datatypeIRI="&xsd;integer">5</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAgeDistribution"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#hasDistribution"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEducationDistribution"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#hasDistribution"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEthnicDistribution"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#hasDistribution"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasIncomeDistribution"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#hasDistribution"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStudentsDistribution"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#hasDistribution"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAgeDistribution"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#Population"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEducationDistribution"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#Population"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEthnicDistribution"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#Population"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIncomeDistribution"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#Population"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStudentsDistribution"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAgeDistribution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#indicatorLevel"/>
+            <Class IRI="#AgeGroup"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEducationDistribution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#indicatorLevel"/>
+            <Class IRI="#EducationLevel"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEthnicDistribution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#indicatorLevel"/>
+            <Class IRI="#EthnicGroup"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIncomeDistribution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#indicatorLevel"/>
+            <Class IRI="#IncomeLevel"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStudentsDistribution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#indicatorLevel"/>
+            <Class IRI="#EducationLevel"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#activePopulationInWorkingAge"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#adultLiteracyRate"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#averageHouseholdSize"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#carOwnershipRate"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#cityPopulation"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#crimeRate"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#crudeBirthRate"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#crudeDeathRate"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#crudeMarriageRate"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#generalFertilityRate"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#lifeExpectancy"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#medianHouseholdIncome"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#netMigrationRate"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#numberOfHouseholds"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#populationBelowPovertyLine"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#populationGrowth"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#unemploymentRate"/>
+        <DataProperty IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#populationIndicator"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#activePopulationInWorkingAge"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#adultLiteracyRate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#ageRangeFrom"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#ageRangeTo"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#averageHouseholdSize"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#carOwnershipRate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#cityPopulation"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#crimeRate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#crudeBirthRate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#crudeDeathRate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#crudeMarriageRate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#generalFertilityRate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#lifeExpectancy"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#medianHouseholdIncome"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#netMigrationRate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#numberOfHouseholds"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#populationBelowPovertyLine"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#populationGrowth"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#unemploymentRate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#activePopulationInWorkingAge"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#adultLiteracyRate"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#averageHouseholdSize"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#carOwnershipRate"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cityPopulation"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crimeRate"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crudeBirthRate"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crudeDeathRate"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crudeMarriageRate"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#generalFertilityRate"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#lifeExpectancy"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#medianHouseholdIncome"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#netMigrationRate"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numberOfHouseholds"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#populationBelowPovertyLine"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#populationGrowth"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#unemploymentRate"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/PopulationSkeleton.owl#ResidentPopulation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <Class IRI="#IncomeLevel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <Class IRI="#IncomeLevel"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#activePopulationInWorkingAge"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#adultLiteracyRate"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ageRangeFrom"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ageRangeTo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#averageHouseholdSize"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#carOwnershipRate"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cityPopulation"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#crimeRate"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#crudeBirthRate"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#crudeDeathRate"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#crudeMarriageRate"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#generalFertilityRate"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#lifeExpectancy"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#medianHouseholdIncome"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#netMigrationRate"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numberOfHouseholds"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#populationBelowPovertyLine"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#populationGrowth"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#unemploymentRate"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#yearlyIncomeFrom"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#yearlyIncomeTo"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#AgeGroup</IRI>
+        <IRI>http://www.ontologyportal.org/SUMO.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AgeGroup</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">age group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#BeliefGroup</IRI>
+        <IRI>http://www.ontologyportal.org/SUMO.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BeliefGroup</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">belief group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#EthnicGroup</IRI>
+        <IRI>http://www.ontologyportal.org/SUMO.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EthnicGroup</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ethnic group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#RacialEthnicGroup</IRI>
+        <IRI>http://www.ontologyportal.org/SUMO.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RacialEthnicGroup</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">racial ethnic group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#activePopulationInWorkingAge</IRI>
+        <Literal datatypeIRI="&xsd;string">Number of employed people in working age per 1000 total population.
+
+Working population refers to the number of people who are willing and eligible to work. Those who are above 15 years of age and willing to work are considered in this bracket. Retirement age differs from one country to another so respective working populations are affected accordingly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#adultLiteracyRate</IRI>
+        <Literal datatypeIRI="&xsd;string">The literacy rate is the proportion of the population over age 15 that can read and write.
+Rate in percentage.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#averageHouseholdSize</IRI>
+        <Literal datatypeIRI="&xsd;string">A measure obtained by dividing the number of people in households by the number of households</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#carOwnershipRate</IRI>
+        <Literal datatypeIRI="&xsd;string">Car ownership is the number of cars per 1 000 inhabitants; passenger cars refer to motor vehicles other than two-wheelers, intended for the carriage of passenger and designed to seat no more than nine people (including the driver).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#crimeRate</IRI>
+        <Literal datatypeIRI="&xsd;string">Number of crimes per year per 1000 inhabitants</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#crudeBirthRate</IRI>
+        <Literal datatypeIRI="&xsd;string">The annual number of live births per 1,000 people.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#crudeDeathRate</IRI>
+        <Literal datatypeIRI="&xsd;string">The annual number of deaths per 1,000 people.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#crudeMarriageRate</IRI>
+        <Literal datatypeIRI="&xsd;string">The crude marriage rate is calculated as the number of marriages registered during a calendar year per 1,000 estimated resident population.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#generalFertilityRate</IRI>
+        <Literal datatypeIRI="&xsd;string">The annual number of live births per 1,000 women of childbearing age (often taken to be from 15 to 49 years old, but sometimes from 15 to 44).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#lifeExpectancy</IRI>
+        <Literal datatypeIRI="&xsd;string">Average number of years an individual could be expected to live based on current patterns of mortality.
+This indicator reflects environmental conditions in a country, the health of its people, the quality of care they receive when they are sick, and their living conditions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#medianHouseholdIncome</IRI>
+        <Literal datatypeIRI="&xsd;string">Household income is the sum of money income received in the previous calendar year by all household members 15 years old and over, including household members not related to the householder, people living alone, and others in nonfamily households.
+
+The median household income is commonly used to provide data about geographic areas and divides households into two equal segments with the first half of households earning less than the median household income and the other half earning more.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#netMigrationRate</IRI>
+        <Literal datatypeIRI="&xsd;string">Net migration rate is the difference of immigrants and emigrants of an area in a period of time (usually a year), divided  per 1,000 inhabitants (considered on midterm population).
+A positive value represents more people entering the country than leaving it, while a negative value mean more people leaving than entering it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#populationBelowPovertyLine</IRI>
+        <Literal datatypeIRI="&xsd;string">The number of people below the poverty line, per 1000 resident population.
+
+The poverty threshold, or poverty line, is the minimum level of income deemed necessary to achieve an adequate standard of living in a given country. In practice, like the definition of poverty, the official or common understanding of the poverty line is significantly higher in developed countries than in developing countries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#populationGrowth</IRI>
+        <Literal datatypeIRI="&xsd;string">Population growth per year
+(Births - Deaths) + (Immigration - Emigration)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#unemploymentRate</IRI>
+        <Literal datatypeIRI="&xsd;string">The unemployment rate represents the number of unemployed people as a percentage of the civilian labor force. For example, if the civilian labor force equals 100 people and 7 people are unemployed, then the unemployment rate would be 7 percent.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+

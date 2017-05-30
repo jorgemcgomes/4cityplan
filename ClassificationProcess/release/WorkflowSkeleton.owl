@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/WorkflowSkeleton.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/ontologies/LandUseSkeleton.owl</Import>
+    <Declaration>
+        <Class IRI="#ClassifyStep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisplayStep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VoidStep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorkflowStep"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#firstSubstepOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChild"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFirstSubstep"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNextSiblings"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNextStep"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPreviousSiblings"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPreviousStep"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSiblings"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#showCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#showFeatures"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RootStep"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#DisplayStep"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WorkflowStep"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#showFeatures"/>
+                <Class abbreviatedIRI=":Thing"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VoidStep"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WorkflowStep"/>
+            <ObjectMaxCardinality cardinality="0">
+                <ObjectProperty IRI="#showFeatures"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ClassifyStep"/>
+        <Class IRI="#DisplayStep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VoidStep"/>
+        <Class IRI="#WorkflowStep"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#DisplayStep"/>
+        <Class IRI="#VoidStep"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#WorkflowStep"/>
+        <NamedIndividual IRI="#RootStep"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#firstSubstepOf"/>
+        <ObjectProperty IRI="#hasParent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFirstSubstep"/>
+        <ObjectProperty IRI="#hasChild"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNextSiblings"/>
+        <ObjectProperty IRI="#hasSiblings"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNextStep"/>
+        <ObjectProperty IRI="#hasNextSiblings"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPreviousSiblings"/>
+        <ObjectProperty IRI="#hasSiblings"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPreviousStep"/>
+        <ObjectProperty IRI="#hasPreviousSiblings"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#firstSubstepOf"/>
+        <ObjectProperty IRI="#hasFirstSubstep"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasChild"/>
+        <ObjectProperty IRI="#hasParent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasNextStep"/>
+        <ObjectProperty IRI="#hasPreviousStep"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#firstSubstepOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasFirstSubstep"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasNextStep"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPreviousStep"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#firstSubstepOf"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasFirstSubstep"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasNextStep"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPreviousStep"/>
+    </InverseFunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasNextSiblings"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasPreviousSiblings"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#firstSubstepOf"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasChild"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFirstSubstep"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNextSiblings"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNextStep"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParent"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPreviousSiblings"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPreviousStep"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSiblings"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#showCategory"/>
+        <Class IRI="#DisplayStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#showFeatures"/>
+        <Class IRI="#DisplayStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#firstSubstepOf"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasChild"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFirstSubstep"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNextSiblings"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNextStep"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParent"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPreviousSiblings"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPreviousStep"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSiblings"/>
+        <Class IRI="#WorkflowStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#showCategory"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/LandUseSkeleton.owl#LandUseCategory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#showFeatures"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/GISCore.owl#Feature"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#hasSiblings"/>
+            <ObjectProperty IRI="#firstSubstepOf"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasParent"/>
+    </SubObjectPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+
